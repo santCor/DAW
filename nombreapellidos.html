@@ -1,15 +1,5 @@
 <!-- UD.-3 ejercicio 8 nombreapellidos
-	Adela Santalla 
-	
-	Crea un programa que pida al usuario su nombre y apellidos y muestre:
-		El tamaño del nombre más los apellidos (sin contar espacios).
-		La cadena en minúsculas y en mayúsculas.
-		Que divida el nombre y los apellidos y los muestre en 3 líneas, donde ponga Nombre: / Apellido1: / Apellido 2:
-		Una propuesta de nombre de usuario, compuesto por la inicial del nombre, el primer apellido y la
-			inicial del segundo apellido: ej. Para Laura Folgado Galache sería lfolgadog.
-		Una propuesta de nombre de usuario compuesto por las tres primeras letras del nombre y de los dos
-			apellidos: ej. Laufolgal.
-
+	Asignatura DWCC 
 -->
 
 <!DOCTYPE html>
@@ -23,7 +13,8 @@
 			//pedimos el número
 			let datos = prompt("Introduce tu nombre y apellidos:");
 			
-			// separamos el nombre y cada uno de los apellidos
+			// separamos el nombre y cada uno de los apellidos haciendo un split
+			// y los guardamos por separado cada uno en una variable
 			let cadena = datos.split(" ");
 			let nombre = cadena[0];
 			let apellido1 = cadena[1];
