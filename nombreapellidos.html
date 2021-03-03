@@ -1,0 +1,48 @@
+<!-- UD.-3 ejercicio 8 nombreapellidos
+	Adela Santalla 
+	
+	Crea un programa que pida al usuario su nombre y apellidos y muestre:
+		El tamaño del nombre más los apellidos (sin contar espacios).
+		La cadena en minúsculas y en mayúsculas.
+		Que divida el nombre y los apellidos y los muestre en 3 líneas, donde ponga Nombre: / Apellido1: / Apellido 2:
+		Una propuesta de nombre de usuario, compuesto por la inicial del nombre, el primer apellido y la
+			inicial del segundo apellido: ej. Para Laura Folgado Galache sería lfolgadog.
+		Una propuesta de nombre de usuario compuesto por las tres primeras letras del nombre y de los dos
+			apellidos: ej. Laufolgal.
+
+-->
+
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8">
+		<title>Nombre y Apellidos</title>
+	</head>
+	<body>
+		<script>
+			//pedimos el número
+			let datos = prompt("Introduce tu nombre y apellidos:");
+			
+			// separamos el nombre y cada uno de los apellidos
+			let cadena = datos.split(" ");
+			let nombre = cadena[0];
+			let apellido1 = cadena[1];
+			let apellido2 = cadena[2];
+			
+			// propuesta de nombre de usuario1
+			let usuario1 = (nombre.charAt(0)).toLowerCase() + apellido1.toLowerCase() + (apellido2.charAt(0)).toLowerCase();
+			// propuesta de nombre de usuario2
+			let usuario2 = nombre.substring(0,3) + (apellido1.substring(0,3)).toLowerCase() + (apellido2.substring(0,3)).toLowerCase();
+			
+			
+			// hacemos las impresiones
+			document.write("El tamaño del nombre más los apellidos: " + (nombre.length + apellido1.length + apellido2.length) + "</br>");
+			document.write("Nombre y apellidos en minúsculas: " + datos.toLowerCase() + "</br>");
+			document.write("Nombre y apellidos en mayúsculas: " + datos.toUpperCase() + "</br>");
+			document.write(`Nombre: ${nombre}` + "</br>" + `Apellido1: ${apellido1}` + "</br>" + `Apellido2: ${apellido2}` + "</br>");
+			document.write(`Propuesta 1 de nopmbre de usuario: ${usuario1}` + "</br>");
+			document.write(`Propuesta 2 de nopmbre de usuario: ${usuario2}` + "</br>");
+			
+		</script>
+	</body>
+</html>
