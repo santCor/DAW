@@ -34,6 +34,21 @@
 			document.write(`Propuesta 1 de nopmbre de usuario: ${usuario1}` + "</br>");
 			document.write(`Propuesta 2 de nopmbre de usuario: ${usuario2}` + "</br>");
 			
+			
+			//pedimos la contraseña
+			let contraseña = prompt("Introduce tu contraseña:");
+			
+			// creamos el patrón
+			let reg1 = /[A-Z]+/g;
+			let reg2 = /[0-9]+/g;
+			let reg3 = /[-_@#$%&]+/g;
+			
+			// hacemos la comprobación y la impresión
+			if(contraseña.length >=8 && contraseña.length <=16 && contraseña.match(reg1) && contraseña.match(reg2) && contraseña.match(reg3)){
+				document.write("Contraseña segura");
+			} else {
+				document.write("La contraseña no es segura");
+			}
 		</script>
 	</body>
 </html>
