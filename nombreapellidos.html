@@ -43,7 +43,9 @@
 			let reg2 = /[0-9]+/g;
 			let reg3 = /[-_@#$%&]+/g;
 			
-			// hacemos la comprobación y la impresión
+			// hacemos la comprobación de la contraseñs para ver si es segura
+			// debe tener entre 8 y 21 caracteres
+			// una mayúscula, una minúscula y un signo
 			if(contraseña.length >=8 && contraseña.length <=16 && contraseña.match(reg1) && contraseña.match(reg2) && contraseña.match(reg3)){
 				document.write("Contraseña segura");
 			} else {
